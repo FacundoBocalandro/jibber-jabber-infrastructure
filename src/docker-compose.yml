@@ -39,3 +39,7 @@ services:
       - auth-database.env
     volumes:
       - jjauth:/var/lib/postgresql/data
+
+volumes:
+  jjposts:
+  jjauth:
