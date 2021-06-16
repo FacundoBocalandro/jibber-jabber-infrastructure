@@ -17,7 +17,7 @@ services:
       - 8082:8080
     env_file:
       - posts.env
-  jibber_jabbber_posts_db:
+  jibber_jabber_posts_db:
     image: postgres:12
     ports:
       - 5432:5432
