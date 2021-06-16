@@ -12,6 +12,7 @@ services:
       - 8080:8080
 
   jibber-jabber-posts:
+    container_name: jibber-jabber-posts
     image: ghcr.io/facundobocalandro/jj-posts-dev:latest
     ports:
       - 8082:8080
@@ -26,6 +27,7 @@ services:
     volumes:
       - jjposts:/var/lib/postgresql/data
   jibber_jabber_auth:
+    container_name: jibber-jabber-auth
     image: ghcr.io/facundobocalandro/jj-posts-dev:latest
     ports:
       - 8081:8080
