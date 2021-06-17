@@ -13,7 +13,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 3000:80
+      - 80:80
 
   jibber_jabber_posts:
     container_name: jibber-jabber-posts
