@@ -3,7 +3,7 @@ version: '3.7'
 services:
   jibber_jabber_client:
     container_name: jibber-jabber-client
-    image: ghcr.io/facundobocalandro/jj-client-dev:latest
+    image: jibber-jabber-client_jibber-jabber-client:latest
     ports:
       - 1337:80
 
@@ -17,7 +17,7 @@ services:
 
   jibber_jabber_posts:
     container_name: jibber-jabber-posts
-    image: ghcr.io/facundobocalandro/jj-posts-dev:latest
+    image: jibber-jabber-posts_jibber-jabber-posts:latest
     ports:
       - 8082:8080
     env_file:
@@ -33,7 +33,7 @@ services:
       - jjposts:/var/lib/postgresql/data
   jibber_jabber_auth:
     container_name: jibber-jabber-auth
-    image: ghcr.io/facundobocalandro/jj-auth-dev:latest
+    image: jibber-jabber-auth_jibber-jabber-auth:latest
     ports:
       - 8081:8080
     env_file:
