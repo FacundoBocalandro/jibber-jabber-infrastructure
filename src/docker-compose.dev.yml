@@ -58,7 +58,24 @@ services:
       - auth-database.env
     volumes:
       - jjauth:/var/lib/postgresql/data
+  jibber-jabber-messages:
+    container_name: jibber-jabber-messages
+    image: ghcr.io/facundobocalandro/jj-messages-dev:latest
+    ports:
+      - 8083:8080
+    env_file:
+      - messages.env
+  jibber_jabber_messages_db:
+    container_name: jibber_jabber_messages_db
+    image: postgres:12
+    ports:
+      - 5434:5432
+    env_file:
+      - messages-database.env
+    volumes:
+      - jjmessages:/var/lib/postgresql/data
 
 volumes:
   jjposts:
   jjauth:
+  jjmessages:
