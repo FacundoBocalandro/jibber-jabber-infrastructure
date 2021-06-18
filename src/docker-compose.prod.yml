@@ -11,7 +11,7 @@ services:
     container_name: jibber-jabber-proxy
     build:
       context: .
-      dockerfile: dev.Dockerfile
+      dockerfile: prod.Dockerfile
     ports:
       - 80:80
       - 443:443
