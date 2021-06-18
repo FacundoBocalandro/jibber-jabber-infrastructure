@@ -78,3 +78,5 @@ echo
 
 echo "### Reloading nginx ..."
 docker-compose -f docker-compose.prod.yml exec jibber-jabber-proxy nginx -s reload
+
+#https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
